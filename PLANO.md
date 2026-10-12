@@ -1,12 +1,12 @@
 # 📋 Plano do projeto: CodeLens-local-09-10-c (16)
 
-_Gerado em 12/10/2026, 20:08:12 — sem IA, lendo os arquivos._
+_Gerado em 12/10/2026, 20:10:50 — sem IA, lendo os arquivos._
 
 ## 📊 Visão geral
 | Item | Valor |
 |---|---|
 | Arquivos | 163 |
-| Linhas | 21.538 |
+| Linhas | 21.566 |
 | Telas/páginas | 13 |
 | Rotas do backend | 58 |
 | Chamadas do app | 14 |
