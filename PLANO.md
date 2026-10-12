@@ -1,22 +1,22 @@
 # 📋 Plano do projeto: CodeLens-local-09-10-c (16)
 
-_Gerado em 12/10/2026, 20:02:18 — sem IA, lendo os arquivos._
+_Gerado em 12/10/2026, 20:08:12 — sem IA, lendo os arquivos._
 
 ## 📊 Visão geral
 | Item | Valor |
 |---|---|
-| Arquivos | 138 |
-| Linhas | 20.925 |
-| Telas/páginas | 12 |
+| Arquivos | 163 |
+| Linhas | 21.538 |
+| Telas/páginas | 13 |
 | Rotas do backend | 58 |
 | Chamadas do app | 14 |
 | Tabelas do banco | 4 |
 | Variáveis de ambiente | 17 |
 
-**Linguagens:** TypeScript (React) (77), TypeScript (32), JavaScript (5), Imagem (5), YAML (4), JSON (4), Outros (2), Batch (Windows) (2), Shell (2), Markdown (2), HTML (1), Imagem SVG (1), CSS (1)
+**Linguagens:** TypeScript (React) (77), TypeScript (32), Imagem (20), JSON (6), JavaScript (6), YAML (5), Outros (3), HTML (3), Imagem SVG (3), Batch (Windows) (2), Shell (2), Markdown (2), Ícone (1), CSS (1)
 
 ## 💡 O que fazer (em ordem)
-1. 🧹 Tirar a Replit de 10 arquivo(s) (🏗️ Preparar → Fazer tudo)
+1. 🧹 Tirar a Replit de 11 arquivo(s) (🏗️ Preparar → Fazer tudo)
 2. 🔌 O app chama 1 endereço(s) que o backend deste projeto NÃO tem — veja "O que falta no backend"
 3. 🔐 Criar um .env.example com: AI_INTEGRATIONS_GEMINI_API_KEY, AI_INTEGRATIONS_GEMINI_BASE_URL, BASE_URL, C, DATA_DIR, DEV, LOG_LEVEL, NODE_ENV, NO_BROWSER, PATH, PORT, PREFIX… (os valores você coloca no servidor, nunca no código)
 4. 🗄️ Precisa de banco de dados (4 tabela(s)) — Neon ou Supabase servem, grátis
@@ -54,6 +54,7 @@ _Gerado em 12/10/2026, 20:02:18 — sem IA, lendo os arquivos._
 | `/settings` | src/App.tsx |
 | `/playground` | src/App.tsx |
 | `/assistant` | src/App.tsx |
+| `hub.html` | hub.html |
 | `index.html` | index.html |
 | `/assistant` | src/pages/assistant.tsx |
 | `/home` | src/pages/home.tsx |
@@ -255,6 +256,7 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 - server/lib/tar.ts
 - server/routes/code-assistant.ts
 - server/routes/projects.ts
+- service-worker.js
 - src/components/ui/badge.tsx
 - src/components/ui/button.tsx
 - vite.config.ts
@@ -272,12 +274,31 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 ├─ 📁 .github/
 │  └─ 📁 workflows/
 │     ├─ apk-capacitor.yml
+│     ├─ apk.yml
 │     ├─ desktop-exe.yml
 │     ├─ teste.yml
 │     └─ windows.yml
 ├─ 📁 electron/
 │  ├─ main.cjs
 │  └─ preload.cjs
+├─ 📁 icons/
+│  ├─ apple-touch-icon.png
+│  ├─ icon-128.png
+│  ├─ icon-144.png
+│  ├─ icon-152.png
+│  ├─ icon-16.png
+│  ├─ icon-180.png
+│  ├─ icon-192.png
+│  ├─ icon-32.png
+│  ├─ icon-384.png
+│  ├─ icon-48.png
+│  ├─ icon-512.png
+│  ├─ icon-72.png
+│  ├─ icon-96.png
+│  ├─ icon.svg
+│  ├─ maskable-192.png
+│  ├─ maskable-512.png
+│  └─ maskable.svg
 ├─ 📁 lib/
 │  ├─ 📁 api-client-react/
 │  │  └─ index.ts
@@ -417,13 +438,20 @@ _Só os nomes. Os valores (chaves, senhas) nunca vão no código nem no GitHub._
 │  └─ Abrir-CodeLens.bat
 ├─ .gitignore
 ├─ .npmrc
+├─ 404.html
+├─ apk.config.json
 ├─ capacitor.config.json
+├─ favicon.ico
+├─ hub.html
+├─ hub.webmanifest
 ├─ index.html
 ├─ iniciar.bat
 ├─ iniciar.sh
 ├─ LEIA-ME.md
+├─ manifest.json
 ├─ package.json
 ├─ PLANO.md
+├─ service-worker.js
 ├─ termux-atalho.sh
 ├─ tsconfig.json
 └─ vite.config.ts
