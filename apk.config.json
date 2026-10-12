@@ -2,8 +2,8 @@
   "nome": "CodeLens",
   "arquivo": "codelens",
   "pacote": "com.maikonadvogadomgalt.codelens",
-  "versao": "1.1",
-  "versaoCodigo": 2,
+  "versao": "1.2",
+  "versaoCodigo": 3,
   "cor": "#0f1420",
   "orientacao": "unspecified",
   "lacre": true

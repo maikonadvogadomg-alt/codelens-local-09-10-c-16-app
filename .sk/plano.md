@@ -1,22 +1,25 @@
 # Plano do projeto: CodeLens-local-09-10-c (16)
 
-_Gerado pelo Mini SK em 12/10/2026, 19:44:51_
+_Gerado pelo Mini SK em 12/10/2026, 20:14:46_
 
 ## Resumo
 
-- Arquivos: **132** (825.4 KB)
+- Arquivos: **174** (1.7 MB)
 - Tipo: projeto Node com 1 package.json
-- Arquivos por tipo: TSX 77, TypeScript 32, PNG 4, JSON 3, JavaScript 3, YAML 2, Batch 2, Shell 2, Git 1, NPMRC 1, HTML 1, Markdown 1, SVG 1, JPG 1, CSS 1
-- Dependências diferentes: **95** (79 obrigatórias, 16 só para montar)
-- Restos da Replit: **2 arquivo(s)**
+- Arquivos por tipo: TSX 77, TypeScript 32, PNG 20, JSON 7, JavaScript 7, YAML 5, Markdown 3, HTML 3, GRADLE 3, SVG 3, XML 2, Batch 2, Shell 2, Git 1, NPMRC 1, Java 1, PROPERTIES 1, ICO 1, Manifest 1, JPG 1, CSS 1
+- Dependências diferentes: **100** (81 obrigatórias, 19 só para montar)
+- Restos da Replit: **3 arquivo(s)**
 
 ## 📦 codelens-local — `package.json`
 
+- Arquivo principal: `electron/main.cjs`
 
 **Comandos (scripts):**
 
 | Comando | O que faz | Executa |
 |---|---|---|
+| `desktop` | — | `electron .` |
+| `exe` | — | `electron-builder --win portable --publish never` |
 | `iniciar` | — | `node scripts/iniciar.mjs` |
 | `start` | Liga a versão final | `tsx server/index.ts` |
 | `build` | Gera a versão final (pasta dist) | `vite build` |
@@ -25,7 +28,7 @@ _Gerado pelo Mini SK em 12/10/2026, 19:44:51_
 | `dev:tela` | — | `vite` |
 | `checar` | — | `tsc --noEmit -p tsconfig.json` |
 
-**Dependências (o app precisa) — 79:**
+**Dependências (o app precisa) — 81:**
 
 | Pacote | Versão | Pra que serve | Tipo |
 |---|---|---|---|
@@ -108,8 +111,10 @@ _Gerado pelo Mini SK em 12/10/2026, 19:44:51_
 | `vaul` | ^1.1.1 | Gaveta que sobe de baixo (celular) | 🖥 Tela |
 | `wouter` | ^3.3.5 | Troca de páginas dentro do app (rotas) — leve | 🖥 Tela |
 | `zod` | ^3.23.8 | Confere se os dados estão no formato certo | 🧰 Utilidade |
+| `@capacitor/core` | ^7.0.0 | Transforma o app em APK (Android) | 📱 APK |
+| `@capacitor/android` | ^7.0.0 | Projeto Android do Capacitor | 📱 APK |
 
-**Dependências de montagem (dev) — 16:**
+**Dependências de montagem (dev) — 19:**
 
 | Pacote | Versão | Pra que serve | Tipo |
 |---|---|---|---|
@@ -129,19 +134,30 @@ _Gerado pelo Mini SK em 12/10/2026, 19:44:51_
 | `tw-animate-css` | ^1.2.0 | Animações prontas para Tailwind | 🎨 Estilo |
 | `typescript` | ^5.6.3 | JavaScript com tipos — só para montar, não vai pro app final | 🔧 Montagem |
 | `vite` | ^6.0.0 | Monta (builda) o app e roda o modo de teste rápido | 🔧 Montagem |
+| `@capacitor/cli` | ^7.0.0 | Comandos do Capacitor (só para montar) | 📱 APK |
+| `electron` | ^33.2.0 | Executável de computador (janela própria) | 💻 EXE |
+| `electron-builder` | ^25.1.8 | Gera o .exe do Electron | 💻 EXE |
 
 ## ⛔ Restos da Replit (tirar ou trocar)
 
+- PLANO.md — 4 menção(ões)
 - server/routes/ai.ts — 2 menção(ões)
 - server/routes/code-assistant.ts — 2 menção(ões)
 
-## Arquivos importantes (27) — mandar estes para a IA
+## Arquivos importantes (34) — mandar estes para a IA
 
+- `.github/workflows/apk-capacitor.yml`
+- `.github/workflows/apk.yml`
+- `.github/workflows/desktop-exe.yml`
 - `.github/workflows/teste.yml`
 - `.github/workflows/windows.yml`
+- `capacitor.config.json`
+- `electron/main.cjs`
+- `electron/preload.cjs`
 - `lib/api-client-react/index.ts`
 - `lib/api-zod/index.ts`
 - `lib/db/index.ts`
+- `manifest.json`
 - `package.json`
 - `public/manifest.json`
 - `server/index.ts`
@@ -165,13 +181,61 @@ _Gerado pelo Mini SK em 12/10/2026, 19:44:51_
 - `tsconfig.json`
 - `vite.config.ts`
 
-## Estrutura completa (132 arquivos)
+## Estrutura completa (174 arquivos)
 
 ```
 ├── .github/
 │   └── workflows/
+│       ├── apk-capacitor.yml
+│       ├── apk.yml
+│       ├── desktop-exe.yml
 │       ├── teste.yml
 │       └── windows.yml
+├── .sk/
+│   ├── hub.json
+│   └── plano.md
+├── android/
+│   ├── app/
+│   │   ├── src/
+│   │   │   └── main/
+│   │   │       ├── assets/
+│   │   │       │   └── __ponte.js
+│   │   │       ├── java/
+│   │   │       │   └── app/
+│   │   │       │       └── minisk/
+│   │   │       │           └── shell/
+│   │   │       │               └── MainActivity.java
+│   │   │       ├── res/
+│   │   │       │   ├── mipmap-xxxhdpi/
+│   │   │       │   │   └── ic_launcher.png
+│   │   │       │   └── xml/
+│   │   │       │       └── rede.xml
+│   │   │       └── AndroidManifest.xml
+│   │   └── build.gradle
+│   ├── build.gradle
+│   ├── gradle.properties
+│   └── settings.gradle
+├── electron/
+│   ├── main.cjs
+│   └── preload.cjs
+├── icons/
+│   ├── apple-touch-icon.png
+│   ├── icon-128.png
+│   ├── icon-144.png
+│   ├── icon-152.png
+│   ├── icon-16.png
+│   ├── icon-180.png
+│   ├── icon-192.png
+│   ├── icon-32.png
+│   ├── icon-384.png
+│   ├── icon-48.png
+│   ├── icon-512.png
+│   ├── icon-72.png
+│   ├── icon-96.png
+│   ├── icon.svg
+│   ├── maskable-192.png
+│   ├── maskable-512.png
+│   └── maskable.svg
 ├── lib/
 │   ├── api-client-react/
 │   │   └── index.ts
@@ -311,11 +375,20 @@ _Gerado pelo Mini SK em 12/10/2026, 19:44:51_
 │   └── Abrir-CodeLens.bat
 ├── .gitignore
 ├── .npmrc
+├── 404.html
+├── apk.config.json
+├── capacitor.config.json
+├── favicon.ico
+├── hub.html
+├── hub.webmanifest
 ├── index.html
 ├── iniciar.bat
 ├── iniciar.sh
 ├── LEIA-ME.md
+├── manifest.json
 ├── package.json
+├── PLANO.md
+├── service-worker.js
 ├── termux-atalho.sh
 ├── tsconfig.json
 └── vite.config.ts
